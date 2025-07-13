@@ -6,7 +6,6 @@ function PosOrNeg({ budgeted, spent}) {
     // let width = `w-${spent}/${budgeted}`
     let width = ((budgeted - spent) / budgeted) * 100;
 
-    console.log(width)
 
     if((budgeted - spent) > 0){
         return (

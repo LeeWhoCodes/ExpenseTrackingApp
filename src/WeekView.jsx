@@ -4,7 +4,7 @@ import TotalOverview from "./TotalOverview";
 
 function WeekView() {
 
-    const [categoryList, setCategoryList] = useState(null);
+    const [categoryList, setCategoryList] = useState({ categories: []});
 
     useEffect(() => {
         const fetchData = async () => {
@@ -14,11 +14,20 @@ function WeekView() {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const result = await response.json();
+                console.log(result);
                 setCategoryList(result);
+                console.log(categoryList.toString());
             } catch (error) {
                 console.log(error)
             }
         };
+
+        fetchData();
+
+        console.log("the whole category list state")
+                console.log(categoryList);
+                console.log("just the categories array")
+                console.log(categoryList.categories);
     }, []);
 
     let categoryName = "food";
@@ -26,9 +35,14 @@ function WeekView() {
 
   return (
     <>
-    <BudgetOverview />
-    <BudgetOverview />
 
+    {categoryList.categories.map((category) => <BudgetOverview 
+        title={category.title}
+        value={category.value}
+        spent={category.spent}
+        expenses={category.expenses}
+    />
+    )}
 
     <div className="fixed w-full bottom-0">
         <TotalOverview />
