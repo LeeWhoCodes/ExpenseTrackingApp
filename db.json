@@ -1,0 +1,32 @@
+{
+  "users":[
+    { "id": 1, "username": "alice"}
+  ],
+  "budget": [
+    { "id": 1, "userid": 1, "categories": [
+      { "title": "food", "value": "150"},
+      { "title": "gas", "value": "50"},
+      { "title": "spending", "value": "50"},
+      { "title": "food", "value": "200"}
+    ]}
+  ],
+  "week": [
+    { "id": 1, "userid": 1, "week": 1, "categories": [
+      { "title": "food", "value": "150", "expenses": [
+        {"value": "100", "reason": "weekly shop", "location": "pack n Save", "date": "13/7/25"},
+        {"value": "10", "reason": "cheese", "location": "pack n Save", "date": "15/7/25"},
+        {"value": "15", "reason": "takeout dinner", "location": "Wendies", "date": "14/7/25"}
+      ]},
+      { "title": "gas", "value": "50", "expenses": [
+        {"value": "50", "reason": "weekly fuel", "location": "caltext", "date": "13/7/25"},
+        {"value": "40", "reason": "extra fill up", "location": "caltex", "date": "13/7/25"}
+      ]},
+      { "title": "spending", "value": "50", "expenses": [
+        
+      ]},
+      { "title": "misc", "value": "50", "expenses": [
+        {"value": "30", "reason": "Doctors Visit", "location": "doctor", "date": "14/7/25"}
+      ]}
+    ]}
+  ]
+}
