@@ -11,7 +11,7 @@
     ]}
   ],
   "week": [
-    { "id": 1, "userid": 1, "week": 1, "categories": [
+    { "id": 1, "userid": 1, "week": 1, "value": "300", "spent": "245", "categories": [
       { "title": "food", "value": "150", "spent": "125", "expenses": [
         {"value": "100", "reason": "weekly shop", "location": "pack n Save", "date": "13/7/25"},
         {"value": "10", "reason": "cheese", "location": "pack n Save", "date": "15/7/25"},

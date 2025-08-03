@@ -8,8 +8,10 @@ function BudgetOverview({title, value, spent, expenses}) {
             <p className="mx-4">{title} : ${value}</p>
             <button className="mx-4 ml-auto bg-blue-400">add expense</button>
         </div>
-        <p>{JSON.stringify(expenses)}</p>
-        <BalanceBar />
+        <BalanceBar 
+          value={value}
+          spent={spent}
+        />
     </div>
   )
 }

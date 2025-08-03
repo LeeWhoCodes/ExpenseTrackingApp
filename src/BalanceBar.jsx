@@ -15,18 +15,18 @@ function PosOrNeg({ budgeted, spent}) {
                     <div style={{width: `${width}%`}} className={`h-4 bg-green-500`}></div>
                 </div>
             </div>
-            <p className="text-center py-4">{budgeted - spent}</p>
+            <p className="text-center py-4">${budgeted - spent}</p>
         </>
         );
     } else if ((budgeted - spent) < 0) {
         return (
             <>
-            <div className="bg-slate-300 mx-4">
+            <div className="bg-slate-300 mx-4 overflow-hidden">
             <div className="mr-[50%]">
                 <div style={{width: `${width*(-1)}%`}} className={`h-4 bg-red-500 ml-auto`}></div>
             </div>
             </div>
-            <p className="text-center py-4">{budgeted - spent}</p>
+            <p className="text-center py-4">${budgeted - spent}</p>
             </>
         );
     } else {
@@ -35,13 +35,13 @@ function PosOrNeg({ budgeted, spent}) {
             <div className="bg-slate-300 mx-4">
             <div className={`h-4`}></div>
             </div>
-            <p className="text-center py-4">{budgeted - spent}</p>
+            <p className="text-center py-4">${budgeted - spent}</p>
             </>
         );
     }
 }
 
-function BalanceBar() {
+function BalanceBar({value, spent}) {
 
     // let budgeted = 200;
     // let spent = 50;
@@ -49,8 +49,8 @@ function BalanceBar() {
   return (
     <div>
         <PosOrNeg
-            budgeted={200}
-            spent={100}
+            budgeted={value}
+            spent={spent}
         />
     </div>
   )

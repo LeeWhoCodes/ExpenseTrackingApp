@@ -1,3 +1,5 @@
+//category list should probably more accurately be week or something in that vain
+
 import { useEffect, useState } from "react";
 import BudgetOverview from "./BudgetOverview";
 import TotalOverview from "./TotalOverview";
@@ -45,7 +47,10 @@ function WeekView() {
     )}
 
     <div className="fixed w-full bottom-0">
-        <TotalOverview />
+        <TotalOverview 
+            value={categoryList.value}
+            spent={categoryList.spent}
+        />
     </div>
     </>
   )

@@ -1,14 +1,14 @@
 import BalanceBar from "./BalanceBar";
 
-function TotalOverview() {
-
-    let categoryName = "Total";
-    let budgeted = 200;
+function TotalOverview({value, spent}) {
 
   return (
     <div className="outline-8 bg-amber-200">
-        <p className="p-4 text-center">{categoryName} : ${budgeted}</p>
-        <BalanceBar />
+        <p className="p-4 text-center">Total Budget: ${value}</p>
+        <BalanceBar 
+          value={value}
+          spent={spent}
+        />
     </div>
   )
 }
